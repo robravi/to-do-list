@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Task = ({ task, onToggle, onDelete, onEdit }) => {
   const [isEditTask, setIsEditTask] = useState(false);
-  const [editedTask, setEditedTask] = useState(task.text);
+  const [editedTask, setEditedTask] = useState(task.title);
 
   const saveEditTask = () => {
     onEdit(task.id, editedTask);
@@ -14,12 +14,12 @@ const Task = ({ task, onToggle, onDelete, onEdit }) => {
   };
 
   const cancelEdit = () => {
-    setEditedTask(task.text);
+    setEditedTask(task.title);
     setIsEditTask(false);
   };
 
   return (
-    <div className=" text-black text-black  p-2 mb-4  border-current shadow-2xl  capitalize   rounded-md       ">
+    <div className=" text-black   p-2 mb-4 inline-block  border-current shadow-2xl  capitalize   rounded-md       ">
       <input
         type="checkbox"
         checked={task.completed}
@@ -29,12 +29,13 @@ const Task = ({ task, onToggle, onDelete, onEdit }) => {
       {isEditTask ? (
         <>
           <input
+            className="text-black"
             type="text"
-            value={editedTask || ""}
+            value={editedTask}
             onChange={(e) => setEditedTask(e.target.value)}
           />
           <button
-            className="ml-2 ml-2 bg-blue-500 text-white px-4 py-2 rounded-md shadow-2xl"
+            className="ml-2 ml-2 bg-blue-500 text-black px-4 py-2 rounded-md shadow-2xl"
             onClick={saveEditTask}
           >
             Save
@@ -63,7 +64,7 @@ const Task = ({ task, onToggle, onDelete, onEdit }) => {
           >
             Delete
           </button>
-          <p className="text-sm text-gray-500">{task.dateTime}</p>
+          <p className="text-sm text-black-500 ">{task.dateTime}</p>
         </>
       )}
     </div>

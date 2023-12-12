@@ -77,12 +77,6 @@ const App = () => {
       task.id === id ? { ...task, completed: !task.completed } : task
     );
     setTasks(toggledTask);
-    // await fetch(`http://localhost:8000/todos/${id}`, {
-    //   method: "PATCH",
-    //   headers: { "content-type": "application/json" },
-    //   body: JSON.stringify({
-    //     completed: !tasks.completed,
-    //   }),
   };
 
   const deleteTask = async (id) => {
