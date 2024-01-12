@@ -4,13 +4,13 @@
       "userId": 1,
       "id": 3,
       "title": "fugiat veniam minus",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
       "id": 4,
       "title": "et porro tempora",
-      "completed": true
+      "completed": false
     },
     {
       "title": "learn react js and practice",
@@ -20,9 +20,15 @@
     },
     {
       "title": "Learn next.js ",
-      "completed": false,
+      "completed": true,
       "dateTime": "12/12/2023, 14:29:20",
       "id": 6
+    },
+    {
+      "title": "learn js right now and next js 14",
+      "completed": true,
+      "dateTime": "26/12/2023, 15:39:32",
+      "id": 7
     }
   ]
 }

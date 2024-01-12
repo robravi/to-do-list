@@ -35,7 +35,7 @@ const Task = ({ task, onToggle, onDelete, onEdit }) => {
             onChange={(e) => setEditedTask(e.target.value)}
           />
           <button
-            className="ml-2 ml-2 bg-blue-500 text-black px-4 py-2 rounded-md shadow-2xl"
+            className="ml-2  bg-blue-500 text-black px-4 py-2 rounded-md shadow-2xl"
             onClick={saveEditTask}
           >
             Save
